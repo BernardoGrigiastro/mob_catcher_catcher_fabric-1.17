@@ -1,0 +1,9 @@
+{
+	"item.mob_catcher.mob_catcher": "Mob Catcher",
+
+	"item.mob_catcher.mob_catcher.tip1": "Captures and stores passive animals and villagers",
+	"item.mob_catcher.mob_catcher.tip2": "Currently empty",
+	"item.mob_catcher.mob_catcher.tip3": "Contents: %s",
+		
+	"itemGroup.mob_catcher": "Mob Catcher"
+}
