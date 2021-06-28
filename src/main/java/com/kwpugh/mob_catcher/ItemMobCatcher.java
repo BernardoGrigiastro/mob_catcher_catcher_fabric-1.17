@@ -70,11 +70,6 @@ public class ItemMobCatcher extends Item
 
             if((stack.getOrCreateTag().isEmpty()) &&
                     (entity instanceof AnimalEntity ||
-                            entity instanceof HorseEntity ||
-                            entity instanceof DonkeyEntity ||
-                            entity instanceof LlamaEntity ||
-                            entity instanceof MuleEntity ||
-                            entity instanceof RabbitEntity ||
                             entity instanceof GolemEntity ||
                             entity instanceof VillagerEntity) ||
                     entity instanceof WanderingTraderEntity)
@@ -96,7 +91,7 @@ public class ItemMobCatcher extends Item
     public ActionResult useOnBlock(ItemUsageContext context)
     {
         ItemStack stack = context.getStack();
-        if(!(context.getWorld() instanceof ServerWorld)) return ActionResult.SUCCESS;;
+        if(!(context.getWorld() instanceof ServerWorld)) return ActionResult.SUCCESS;
         if(!context.getWorld().isClient && stack.hasTag() && stack.getTag().contains("captured_entity"))
         {
             ServerWorld serverWorld = (ServerWorld) context.getWorld();
@@ -156,7 +151,7 @@ public class ItemMobCatcher extends Item
 
         if (stack.hasTag() && !stack.getOrCreateSubTag("captured_entity").isEmpty())
         {
-            tooltip.add((new TranslatableText("item.mob_catcher.mob_catcher.tip3", stack.getTag().getString("name")).formatted(Formatting.GREEN)));
+            tooltip.add((new TranslatableText("item.mob_catcher.mob_catcher.tip3", stack.getTag().getString("name")).formatted(Formatting.YELLOW)));
         }
     }
 }
